@@ -71,7 +71,7 @@ check azure/images (azuredeploymentweb.png)
 - push latest image to docker hub (if there changes at least one layer must pe pushed check image pushedChanges.png)
 - check the azure app service log there should be 
    a pull log for the latest image (the sha1 should be like one in the generated push command check sha1.png)
-
+----------------------------------------------------------------------------------------------------------------
 // CI-CD FOR (Multiple) DOCKER CONTAINER IN AZURE (MICROSERVICES) (ORCHESTRATION)
 
 ORCHESTRATION:
@@ -99,4 +99,8 @@ TO SOLVE CANNOT ASSIGN REQUEST ADDRESS EXCEPTION:
   also configure the base address in docker-compose.override.yaml file
   to be like this "ShoppingApiUrl=https://shoppingapi"  where shoppingapi is the container name we define in
   docker compose file in the shopping api
+-----------------------------------------------------------------------------------------------------------
+// HOW TO RUN DOCKER COMPOSE FROM COMMAND LINE
+
+- 
 
