@@ -1,0 +1,8 @@
+NOTES:
+- when we have images in docker desktop app  each image when we run it creates container and associated 
+  with it in containers tab 
+- to remove and image first it should be unused and has no associated containers so container must be removed first then we can remove the image
+
+Commands:
+1-docker images                      // listing all images
+2-docker rmi image-name-lowercase    // remove images 
