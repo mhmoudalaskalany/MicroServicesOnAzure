@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   shopping.api:
+    container_name: shoppingapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
@@ -15,6 +16,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
+      - "ShoppingApiUrl=https://shoppingapi"
     depends_on:
       - shopping.api
     ports:

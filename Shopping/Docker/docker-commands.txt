@@ -92,8 +92,11 @@ to compose these services together and run them in an order this process is call
 
 TO SOLVE CANNOT ASSIGN REQUEST ADDRESS EXCEPTION:
 - this means some dependent services can't connect the the target services because 
-  it is not running or it has an exception
+  it is not running or it has an exception or the base address is wrong
 - to fix this add depends_on in the dependant service like this
   depends_on:
    - name of the service in docker compose file ex(shopping.api)
+  also configure the base address in docker-compose.override.yaml file
+  to be like this "ShoppingApiUrl=https://shoppingapi"  where shoppingapi is the container name we define in
+  docker compose file in the shopping api
 
