@@ -82,3 +82,10 @@ to compose these services together and run them in an order this process is call
   container orchestration support
 - this will create a docker file if not exist and create a docker-compose file
 - if the project has already a docker file it will update the docker compose file with this project details
+- to arrange port number between services that has dependency on each other
+  in docker-compose.override.yaml file expose the port that is required by the dependent apis
+  ports:
+   - "8001:80" this will run the service internally on 80 and in our local machine to browse on 8001
+
+- then after that we can run the services using docker compose command in the root directory of the docker compose file
+
