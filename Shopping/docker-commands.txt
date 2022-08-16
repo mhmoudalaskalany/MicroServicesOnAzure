@@ -8,10 +8,19 @@ NOTES:
   then run the vs it will create and image with tag latest
 Commands:
 1-docker images                      // listing all images
-2-docker rmi image-name-lowercase    // remove images 
+
+2-docker rmi image-name-lowercase or(first three letters of image id)   // remove images 
+
 3-docker ps                          // list all running containers
+
 4-Images > Container                 // when running this in path with docker files it will create containers for these images
+
 5-docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
+
 6-docker run -d -p 8080:80 --name myapp shoppingclient //create container with name (my app) from image (shoppingclient) with port 8080
+
 7-docker stop (first three letters of container id) // this will stop the container with this id
-8-docker rm (first three letters of container id) // this will remove the container with this id
+
+8-docker start (first three letters of container id) // this will start container
+
+9-docker rm (first three letters of container id) // this will remove the container with this id
