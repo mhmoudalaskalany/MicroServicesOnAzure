@@ -63,6 +63,7 @@ check azure/images (azuredeploymentweb.png)
 (check images enablecontinuousdeployment.png and addwebhooktodocker.png)
 - enable continuous deployment in azure app service
 - copy the webhook url from azure app service in the deployment center tab and paste it in docker webhook tab in repository 
+- once the image is changes the repository will trigger webhook and let azure pull latest image
 - add new changes to code
 - build docker image
 - push latest image to docker hub
