@@ -1,4 +1,5 @@
-﻿using Shopping.Api.Models;
+﻿using Microsoft.Azure.Cosmos;
+using Shopping.Api.Models;
 
 namespace Shopping.Api.Data
 {
@@ -6,7 +7,13 @@ namespace Shopping.Api.Data
     {
         public static void ConnectToCosmos()
         {
-
+            var clientOptions = new CosmosClientOptions
+            {
+                AllowBulkExecution = true,
+                ApplicationName = "Shopping",
+                ConnectionMode = ConnectionMode.Direct
+            };
+            var client = new CosmosClient("cosmos connection here" ,clientOptions);
         }
         public static readonly List<Product> Products = new()
         {
