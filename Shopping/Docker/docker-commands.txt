@@ -67,5 +67,6 @@ check azure/images (azuredeploymentweb.png)
 - add new changes to code
 - build docker image
 - tag the docker image with same repository like before in previous commands
-- push latest image to docker hub (if there changes at least one layer must pe pushed chec image pushedChanges.png)
-- check the azure app service log there should be  a pull log for the latest image
+- push latest image to docker hub (if there changes at least one layer must pe pushed check image pushedChanges.png)
+- check the azure app service log there should be 
+   a pull log for the latest image (the sha1 should be like one in the generated push command check sha1.png)
