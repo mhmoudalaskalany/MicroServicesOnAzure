@@ -79,6 +79,6 @@ if there are multiple services and has a dependencies on each other we must use 
 to compose these services together and run them in an order this process is called orchestration
 
 - to add orchestration support for a project right click on the project and click add then select
- container orchestration support
+  container orchestration support
 - this will create a docker file if not exist and create a docker-compose file
 - if the project has already a docker file it will update the docker compose file with this project details
