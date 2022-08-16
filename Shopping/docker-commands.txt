@@ -21,20 +21,22 @@ Container: a small environment with all dependencies for our application which i
 
 
 Commands:
-1-docker images                      // listing all images
+-docker login -u mahmoudalaskalany  // to login with access token paste access token after writing this command (dckr_pat_UeJNxCtl-M9hhCaoqXtim4KDixM)
 
-2-docker rmi image-name-lowercase or(first three letters of image id)   // remove images 
+-docker images                      // listing all images
 
-3-docker ps                          // list all running containers
+-docker rmi image-name-lowercase or(first three letters of image id)   // remove images 
 
-4-Images > Container                 // when running this in path with docker files it will create containers for these images
+-docker ps                          // list all running containers
 
-5-docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
+-Images > Container                 // when running this in path with docker files it will create containers for these images
 
-6-docker run -d -p 8080:80 --name myapp shoppingclient //create container with name (my app) from image (shoppingclient) with port 8080
+-docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
 
-7-docker stop (first three letters of container id) // this will stop the container with this id
+-docker run -d -p 8080:80 --name myapp shoppingclient //create container with name (my app) from image (shoppingclient) with port 8080
 
-8-docker start (first three letters of container id) // this will start container
+-docker stop (first three letters of container id) // this will stop the container with this id
 
-9-docker rm (first three letters of container id) // this will remove the container with this id
+-docker start (first three letters of container id) // this will start container
+
+-docker rm (first three letters of container id) // this will remove the container with this id
