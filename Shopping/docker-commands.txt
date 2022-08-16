@@ -23,6 +23,7 @@ Container: a small environment with all dependencies for our application which i
 Commands:
 -docker login -u mahmoudalaskalany  // to login with access token paste access token after writing this command (dckr_pat_UeJNxCtl-M9hhCaoqXtim4KDixM)
 
+// build , create and removing images 
 -docker images                      // listing all images
 
 -docker rmi image-name-lowercase or(first three letters of image id)   // remove images 
@@ -33,6 +34,8 @@ Commands:
 
 -docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
 
+// create and run container with specific image
+
 -docker run -d -p 8080:80 --name myapp shoppingclient //create container with name (my app) from image (shoppingclient) with port 8080
 
 -docker stop (first three letters of container id) // this will stop the container with this id
@@ -40,3 +43,8 @@ Commands:
 -docker start (first three letters of container id) // this will start container
 
 -docker rm (first three letters of container id) // this will remove the container with this id
+
+// pushing image to registry hub
+
+-docker tag (first three letters of image id) mahmoudalaskalany/shoppingapp // will create image with tag inside this repository
+-docker push 
