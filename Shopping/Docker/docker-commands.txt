@@ -58,3 +58,12 @@ these steps will create and deploy app service for our web app using docker cont
 - image tag and name write the image name (mahmoudalaskalany/shoppingapp)
 
 check azure/images (azuredeploymentweb.png)
+
+// CI-CD for docker container in Azure
+(check images enablecontinuousdeployment.png and addwebhooktodocker.png)
+- enable continuous deployment in azure app service
+- copy the webhook url from azure app service in the deployment center tab and paste it in docker webhook tab in repository 
+- add new changes to code
+- build docker image
+- push latest image to docker hub
+- 
