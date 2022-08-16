@@ -38,7 +38,7 @@ Commands:
 
 -docker rm (first three letters of container id) // this will remove the container with this id
 
-// pushing image to registry hub
+// pushing image to docker registry hub
 
 -docker tag (first three letters of image id) mahmoudalaskalany/shoppingapp // will create image with tag inside this 
 repository (check dockertag.png)
@@ -47,3 +47,12 @@ repository (check dockertag.png)
 ex: docker push mahmoudalaskalany/shoppingapp:latest
 
 check (dockerpush.png)
+
+
+// pushing image  to azure registry container hub
+these steps will create and deploy app service for our web app using docker container and azure app service
+- go to azure and select new resource
+- select web app for containers resource
+- select your plan
+- in docker tab (select docker source as Docker Hub)
+- image tag and name write the image name (mahmoudalaskalany/shoppingapp)
