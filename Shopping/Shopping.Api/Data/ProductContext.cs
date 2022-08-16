@@ -4,6 +4,10 @@ namespace Shopping.Api.Data
 {
     public static class ProductContext
     {
+        public static void ConnectToCosmos()
+        {
+
+        }
         public static readonly List<Product> Products = new()
         {
             new Product

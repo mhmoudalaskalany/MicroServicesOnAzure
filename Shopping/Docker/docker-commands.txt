@@ -72,7 +72,7 @@ check azure/images (azuredeploymentweb.png)
 - check the azure app service log there should be 
    a pull log for the latest image (the sha1 should be like one in the generated push command check sha1.png)
 
-// CI-CD FOR (Multiple) DOCKER CONTAINER IN AZURE (MICROSERVICES)
+// CI-CD FOR (Multiple) DOCKER CONTAINER IN AZURE (MICROSERVICES) (ORCHESTRATION)
 
 ORCHESTRATION:
 if there are multiple services and has a dependencies on each other we must use docker-compose 
@@ -87,5 +87,13 @@ to compose these services together and run them in an order this process is call
   ports:
    - "8001:80" this will run the service internally on 80 and in our local machine to browse on 8001
 
-- then after that we can run the services using docker compose command in the root directory of the docker compose file
+- then after that we can run the services using docker compose command in the root directory 
+  of the docker compose file
+
+TO SOLVE CANNOT ASSIGN REQUEST ADDRESS EXCEPTION:
+- this means some dependent services can't connect the the target services because 
+  it is not running or it has an exception
+- to fix this add depends_on in the dependant service like this
+  depends_on:
+   - name of the service in docker compose file ex(shopping.api)
 
