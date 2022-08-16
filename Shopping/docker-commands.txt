@@ -9,3 +9,6 @@ NOTES:
 Commands:
 1-docker images                      // listing all images
 2-docker rmi image-name-lowercase    // remove images 
+3-docker ps                          // list all running containers
+4-Images > Container                 // when running this in path with docker files it will create containers for these images
+5- docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
