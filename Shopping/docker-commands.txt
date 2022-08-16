@@ -3,7 +3,7 @@ Registry: an environment where images are saved to be shared between teams
 Image: a version from our application code to be used
 Container: a small environment with all dependencies for our application which is associated with our image we already built
 
-
+----------------------------------------------------------------------------------------------------------------------
 NOTES:
 - when we have images in docker desktop app  each image when we run it creates container and associated 
   with it in containers tab 
@@ -13,15 +13,7 @@ NOTES:
 - to create an image for release mode in vs change the debug mode to release mode and make the running profile as Docker
   then run the vs it will create and image with tag latest
 
-
-
-
-
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------------
 Commands:
 -docker login -u mahmoudalaskalany  // to login with access token paste access token after writing this command (dckr_pat_UeJNxCtl-M9hhCaoqXtim4KDixM)
 
