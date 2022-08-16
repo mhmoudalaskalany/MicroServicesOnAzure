@@ -14,10 +14,11 @@ NOTES:
   then run the vs it will create and image with tag latest
 
 -----------------------------------------------------------------------------------------------------------------------
-Commands:
+COMMANDS:
+// AUTHENTICATION
 -docker login -u mahmoudalaskalany  // to login with access token paste access token after writing this command (dckr_pat_UeJNxCtl-M9hhCaoqXtim4KDixM)
 
-// build , create and removing images 
+// BUILD , CREATE , REMOVE IMAGES 
 -docker images                      // listing all images
 
 -docker rmi image-name-lowercase or(first three letters of image id)   // remove images 
@@ -28,7 +29,7 @@ Commands:
 
 -docker build -t shopping .        // shopping is the image name  , . means there is a docker file here use it to build
 
-// create and run container with specific image
+// BUILD, RUN CONTAINERS
 
 -docker run -d -p 8080:80 --name myapp shoppingclient //create container with name (my app) from image (shoppingclient) with port 8080
 
@@ -38,7 +39,7 @@ Commands:
 
 -docker rm (first three letters of container id) // this will remove the container with this id
 
-// pushing image to docker registry hub
+// PUSHING IMAGE TO DOCKER REGISTRY HUB
 
 -docker tag (first three letters of image id) mahmoudalaskalany/shoppingapp // will create image with tag inside this 
 repository (check dockertag.png)
@@ -49,7 +50,7 @@ ex: docker push mahmoudalaskalany/shoppingapp:latest
 check (dockerpush.png)
 
 
-// pushing image  to azure registry container hub
+// PUSHING IMAGE  TO AZURE REGISTRY CONTAINER HUB
 these steps will create and deploy app service for our web app using docker container and azure app service
 - go to azure and select new resource
 - select web app for containers resource
@@ -59,7 +60,7 @@ these steps will create and deploy app service for our web app using docker cont
 
 check azure/images (azuredeploymentweb.png)
 
-// CI-CD for (Single) docker container in Azure
+// CI-CD FOR (SINGLE) DOCKER CONTAINER IN AZURE (SINGLE SERVICE)
 (check images enablecontinuousdeployment.png and addwebhooktodocker.png)
 - enable continuous deployment in azure app service
 - copy the webhook url from azure app service in the deployment center tab and paste it in docker webhook tab in repository 
@@ -70,3 +71,5 @@ check azure/images (azuredeploymentweb.png)
 - push latest image to docker hub (if there changes at least one layer must pe pushed check image pushedChanges.png)
 - check the azure app service log there should be 
    a pull log for the latest image (the sha1 should be like one in the generated push command check sha1.png)
+
+// CI-CD FOR (Multiple) DOCKER CONTAINER IN AZURE (MICROSERVICES)
