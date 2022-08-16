@@ -1,3 +1,9 @@
+Docker Components:
+Registry: an environment where images are saved to be shared between teams
+Image: a version from our application code to be used
+Container: a small environment with all dependencies for our application which is associated with our image we already built
+
+
 NOTES:
 - when we have images in docker desktop app  each image when we run it creates container and associated 
   with it in containers tab 
@@ -7,10 +13,6 @@ NOTES:
 - to create an image for release mode in vs change the debug mode to release mode and make the running profile as Docker
   then run the vs it will create and image with tag latest
 
-Docker Components:
-Registry: an environment where images are saved to be shared between teams
-Image: a version from our application code to be used
-Container: a small environment with all dependencies for our application which is associated with our image we already built
 
 
 
@@ -46,5 +48,10 @@ Commands:
 
 // pushing image to registry hub
 
--docker tag (first three letters of image id) mahmoudalaskalany/shoppingapp // will create image with tag inside this repository
--docker push 
+-docker tag (first three letters of image id) mahmoudalaskalany/shoppingapp // will create image with tag inside this 
+repository (check dockertag.png)
+
+-docker push (image name with repository/tagname) // will push image to the repositorywith tag name
+ex: docker push mahmoudalaskalany/shoppingapp:latest
+
+check (dockerpush.png)
