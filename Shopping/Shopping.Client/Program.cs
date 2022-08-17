@@ -1,7 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-var configurationBuilder = new ConfigurationBuilder();
-var configuration = configurationBuilder.Build();
+var configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddHttpClient("ShoppingApi", cfg =>
 {
