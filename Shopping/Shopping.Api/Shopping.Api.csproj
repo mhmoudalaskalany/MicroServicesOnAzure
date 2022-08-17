@@ -7,7 +7,7 @@
     <UserSecretsId>7df6d316-a21e-4ca8-bdfa-43366048659c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <DocumentationFile>Shopping.Api.xml</DocumentationFile>
   </PropertyGroup>
 
