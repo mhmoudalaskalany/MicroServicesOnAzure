@@ -1,11 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
-var configurationBuilder = new ConfigurationBuilder();
-var configuration = configurationBuilder.Build();
+var configuration = builder.Configuration;
+var uri = configuration["ShoppingApiUrl"];
 // Add services to the container.
 builder.Services.AddHttpClient("ShoppingApi", cfg =>
 {
-    cfg.BaseAddress = new Uri(configuration["ShoppingApiUrl"]);
+    cfg.BaseAddress = new Uri(uri);
 });
 builder.Services.AddControllersWithViews();
 
