@@ -15,13 +15,12 @@ services:
     container_name: shoppingclient
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
       - "ShoppingApiUrl=http://shoppingapi"
     depends_on:
       - shopping.api
     ports:
       - "8001:80"
-      - "5003:443"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
